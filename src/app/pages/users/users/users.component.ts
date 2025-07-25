@@ -11,6 +11,8 @@ type SortableField = 'nom' | 'email' | 'role';
   selector: 'app-users',
   standalone: true,
   templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss'],
+
   imports: [CommonModule, FormsModule],
 })
 export class UsersComponent implements OnInit {
