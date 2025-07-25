@@ -3,5 +3,5 @@ export interface Message {
   contenu: string;
   conversationId: number;
   senderId: number;
-  dateEnvoi: string;      // ISO date string
+  dateEnvoi: string;
 }
