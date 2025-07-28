@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-shared-input',
   templateUrl: './shared-input.component.html',
+    styleUrls: ['./shared-input.component.scss'],
+
   standalone: true,
     imports: [CommonModule],
   providers: [

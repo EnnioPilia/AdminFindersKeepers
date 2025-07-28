@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeLoginCardComponent } from './home-login-card.component';
+import { SharedSelectComponent } from './shared-select.component';
 
-describe('HomeLoginCardComponent', () => {
-  let component: HomeLoginCardComponent;
-  let fixture: ComponentFixture<HomeLoginCardComponent>;
+describe('SharedSelectComponent', () => {
+  let component: SharedSelectComponent;
+  let fixture: ComponentFixture<SharedSelectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeLoginCardComponent]
+      imports: [SharedSelectComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeLoginCardComponent);
+    fixture = TestBed.createComponent(SharedSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

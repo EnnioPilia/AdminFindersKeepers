@@ -3,13 +3,19 @@ import { HomeLoginComponent } from './pages/auth-home/home-login/home-login/home
 import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
 import { ResetPasswordComponent } from './pages/auth-home/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './pages/auth-home/forgot-password/forgot-password.component';
-// import { authGuard } from './core/guards/auth.guard'; et ca dan le path  "  canActivate: [authGuard]  "
+import { adminGuard } from './core/guards/admin.guard';
+import { UsersComponent } from './pages/users/users/users.component';
+import { ConversationComponent } from './pages/conversation/conversation.component';
+import { ObjectsComponent } from './pages/objects/objects/objects.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home-login', pathMatch: 'full' },
   { path: 'home-login', component: HomeLoginComponent },
-  { path: 'dashboard', component: DashboardComponent, },
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: '**', redirectTo: 'login' }
+  { path: 'dashboard', component: DashboardComponent, canActivate: [adminGuard] },
+  { path: 'users', component: UsersComponent, canActivate: [adminGuard] },
+  { path: 'conversation', component: ConversationComponent, canActivate: [adminGuard] },
+  { path: 'objects', component: ObjectsComponent, canActivate: [adminGuard] },
+  { path: '**', redirectTo: 'home-login' }
 ];
